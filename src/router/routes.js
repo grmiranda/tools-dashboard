@@ -10,6 +10,17 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/test',
+    component: () => import('@/components/layouts/InvoicePdf.vue'),
+    children: [
+      {
+        path: '',
+        name: 'TestingInvoicePdf',
+        component: () => import('@/components/InvoicePdfContent.vue'),
+      },
+    ],
+  },
 ]
 
 export default routes
